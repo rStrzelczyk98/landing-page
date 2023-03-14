@@ -120,6 +120,9 @@ img {
   text-align: center;
   list-style-type: none;
 }
+.menu > li:nth-child(2) {
+  width: 5.5rem;
+}
 .menu > li > a:is(:link, :visited) {
   color: var(--black);
   font-weight: 500;
