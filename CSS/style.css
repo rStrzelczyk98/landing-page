@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 :root {
   --black: #000000;
+  --blackAplha: #00000010;
   --gray: #8a898e;
   --lightGrey: #ebeaed;
   --white: #ffffff;
@@ -212,7 +213,7 @@ h1 {
   color: var(--darkViolet);
 }
 #video .info {
-  align-self: start;
+  align-self: stretch;
 }
 #video .hero-image {
   position: relative;
@@ -243,6 +244,7 @@ h1 {
   margin-bottom: 3rem;
 }
 #video .btn-cta {
+  align-self: end;
   font-size: 1rem;
   color: var(--darkViolet);
   background-color: var(--white);
@@ -291,7 +293,7 @@ h1 {
   text-align: center;
   padding: 3rem 2rem;
   border-radius: 1.75rem;
-  box-shadow: 0 3rem 2.5rem 0.25rem #00000020;
+  box-shadow: 0 3rem 2.5rem 0.25rem var(--blackAplha);
 }
 .icon-big {
   background-repeat: no-repeat;
@@ -305,6 +307,7 @@ h1 {
   font-size: 2.25rem;
 }
 .card-1 p {
+  padding-inline: 1rem;
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.6;
@@ -401,7 +404,7 @@ h1 {
   padding: 1.75rem;
 }
 .social-media li > a:is(:hover, :focus) {
-  background-color: #00000015;
+  background-color: var(--blackAplha);
 }
 .social-media li:first-of-type > a:is(:hover, :focus) {
   border-bottom-left-radius: 0.5rem;
@@ -412,7 +415,7 @@ h1 {
 
 /* FOOTER */
 footer {
-  color: #1e0e62;
+  color: var(--darkViolet);
   max-width: 1232px;
   padding-inline: 1rem;
   margin: 0 auto;
@@ -433,7 +436,7 @@ footer {
 }
 .secondary-nav .menu > li > a,
 footer .btn-login {
-  color: #1e0e62;
+  color: var(--darkViolet);
 }
 .secondary-nav .menu > li:nth-of-type(2) {
   width: 8rem;
@@ -442,6 +445,9 @@ footer .btn-login {
   color: var(--darkVioletAlpha);
   border-top: 1px solid var(--lightGrey);
   padding-block: 2rem;
+}
+.active {
+  transform: translateX(0);
 }
 
 @media screen and (max-width: 1100px) {
@@ -536,6 +542,8 @@ footer .btn-login {
     margin: 0;
   }
 }
-.active {
-  transform: translateX(0);
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    gap: 6rem;
+  }
 }
