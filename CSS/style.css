@@ -469,7 +469,6 @@ footer .btn-login {
 @media screen and (min-width: 700px) {
   :nth-of-type(odd).cards-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
   }
   .card-1:last-child,
   .card-3:last-child {
